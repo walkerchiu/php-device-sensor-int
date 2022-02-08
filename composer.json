@@ -1,0 +1,44 @@
+{
+    "name": "walkerchiu/php-device-sensor-int",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "walkerchiu/php-core-int": "^1.0"
+    },
+    "suggest": {
+        "walkerchiu/php-morph-image-int": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\DeviceSensor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\DeviceSensor\\DeviceSensorServiceProvider"
+            ],
+            "aliases": {
+                "Device":          "WalkerChiu\\DeviceSensor\\Models\\Entities\\Device",
+                "DeviceWithImage": "WalkerChiu\\DeviceSensor\\Models\\Entities\\DeviceWithImage",
+                "DeviceRegister":  "WalkerChiu\\DeviceSensor\\Models\\Entities\\DeviceRegister",
+                "DeviceState":     "WalkerChiu\\DeviceSensor\\Models\\Entities\\DeviceState",
+                "Data":            "WalkerChiu\\DeviceSensor\\Models\\Entities\\Data"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

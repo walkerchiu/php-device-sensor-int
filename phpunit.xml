@@ -1,0 +1,29 @@
+<phpunit>
+
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="DeviceTest.php">./tests/Entities</directory>
+            <directory suffix="DeviceLangTest.php">./tests/Entities</directory>
+            <directory suffix="DeviceFormRequestTest.php">./tests/Forms</directory>
+            <directory suffix="DeviceRegisterTest.php">./tests/Entities</directory>
+            <directory suffix="DeviceRegisterLangTest.php">./tests/Entities</directory>
+            <directory suffix="DeviceRegisterFormRequestTest.php">./tests/Forms</directory>
+            <directory suffix="DeviceStateTest.php">./tests/Entities</directory>
+            <directory suffix="DeviceStateLangTest.php">./tests/Entities</directory>
+            <directory suffix="DeviceStateFormRequestTest.php">./tests/Forms</directory>
+            <directory suffix="DataTest.php">./tests/Entities</directory>
+            <directory suffix="DataFormRequestTest.php">./tests/Forms</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="DeviceRepositoryTest.php">./tests/Repositories</directory>
+            <directory suffix="DeviceRegisterRepositoryTest.php">./tests/Repositories</directory>
+            <directory suffix="DeviceStateRepositoryTest.php">./tests/Repositories</directory>
+            <directory suffix="DataRepositoryTest.php">./tests/Repositories</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_DATABASE" value=":memory:"/>
+    </php>
+
+</phpunit>
